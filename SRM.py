@@ -25,7 +25,7 @@ class SRM:
         return self.finalize()
     
     def initialization(self):
-        print "init"
+        print("init")
         self._uf = UnionFind()
         uf = self._uf
         n = self._n
@@ -59,7 +59,7 @@ class SRM:
         self.merge_small_regions()
     
     def pairs(self):
-        print "pairs"
+        print("pairs")
         pairs = []
         height = self._height
         width = self._width
@@ -175,7 +175,7 @@ class SRM:
         return classes, out.reshape(height, width)
     
     def exploded(self):
-        print "exploded"
+        print("exploded")
         
         out0 = numpy.empty([n, depth])
         out = self._data
