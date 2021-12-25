@@ -47,7 +47,7 @@ class SRM:
     
     def segmentation(self):
         pairs = self.pairs()
-        print "segmentation"
+        print("segmentation")
         
         for (r1, r2) in pairs:
             r1 = self._uf[r1]
@@ -78,7 +78,7 @@ class SRM:
         return pairs
     
     def sort(self, pairs):
-        print "sort"
+        print("sort")
         img = self._image
         def diff(p):
             (r1, r2) = p
@@ -116,7 +116,7 @@ class SRM:
         self._sizes[r] = n
     
     def merge_small_regions(self):
-        print "small"
+        print("small")
         
         height = self._height
         width = self._width
@@ -132,7 +132,7 @@ class SRM:
                     self.merge(r1, r2)
     
     def finalize(self):
-        print "finalize"
+        print("finalize")
         
         height = self._height
         width = self._width
@@ -151,7 +151,7 @@ class SRM:
         return self._finalized
     
     def map(self):
-        print "map"
+        print("map")
         
         height = self._height
         width = self._width
