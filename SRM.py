@@ -37,8 +37,8 @@ class SRM:
         self._data = numpy.empty([n, depth + 2])
         self._sizes = numpy.ones(n)
         
-        for i in xrange(height):
-            for j in xrange(width):
+        for i in range(height):
+            for j in range(width):
                 idx = i * width + j
                 uf[idx]
                 self._data[idx, 0:depth] = img[idx]
