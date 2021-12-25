@@ -65,8 +65,8 @@ class SRM:
         width = self._width
         
         # using a C4-connectivity
-        for i in xrange(height - 1):
-            for j in xrange(width - 1):
+        for i in range(height - 1):
+            for j in range(width - 1):
                 idx = i * width + j
                 # left
                 pairs.append( ( idx, i * width + j + 1) )
@@ -122,8 +122,8 @@ class SRM:
         width = self._width
         smallregion = self._smallregion
         
-        for i in xrange(self._height):
-            for j in xrange(1, self._width):
+        for i in range(self._height):
+            for j in range(1, self._width):
                 idx = i * width + j
                 r1 = self._uf[idx]
                 r2 = self._uf[idx - 1]
@@ -141,8 +141,8 @@ class SRM:
         uf = self._uf
         data = self._data[:, 0:depth]
         out = numpy.empty([self._n, depth])
-        for i in xrange(height):
-            for j in xrange(1, width):
+        for i in range(height):
+            for j in range(1, width):
                 idx = i * width + j
                 r1 = uf[idx]
                 out[idx] = data[r1]
@@ -162,8 +162,8 @@ class SRM:
         uf = self._uf
         data = self._data[:, 0:depth]
         out = numpy.empty(self._n)
-        for i in xrange(height):
-            for j in xrange(1, width):
+        for i in range(height):
+            for j in range(1, width):
                 idx = i * width + j
                 r1 = uf[idx]
                 if r1 in classes:
@@ -181,8 +181,8 @@ class SRM:
         out = self._data
         expl = numpy.zeros([2 * self._height, 2 * self._width, self._depth])
         
-        for i in xrange(self._height):
-            for j in xrange(1, self._width):
+        for i in range(self._height):
+            for j in range(1, self._width):
                 r1 = self._uf[r]
                 x = int(self._more[r1, 0])
                 y = int(self._more[r1, 1])
